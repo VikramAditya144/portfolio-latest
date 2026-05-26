@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#915EFF22"/>
+      <stop offset="100%" style="stop-color:#915EFF08"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid lines -->
+  <g opacity="0.06" stroke="#915EFF" stroke-width="1">
+    <line x1="0" y1="126" x2="1200" y2="126"/><line x1="0" y1="252" x2="1200" y2="252"/>
+    <line x1="0" y1="378" x2="1200" y2="378"/><line x1="0" y1="504" x2="1200" y2="504"/>
+    <line x1="240" y1="0" x2="240" y2="630"/><line x1="480" y1="0" x2="480" y2="630"/>
+    <line x1="720" y1="0" x2="720" y2="630"/><line x1="960" y1="0" x2="960" y2="630"/>
+  </g>
+  <!-- Agent cards -->
+  <rect x="60" y="160" width="220" height="110" rx="12" fill="url(#card)" stroke="#915EFF44" stroke-width="1"/>
+  <text x="80" y="195" font-family="monospace" font-size="11" fill="#915EFF">AGENT_01</text>
+  <text x="80" y="215" font-family="monospace" font-size="13" fill="#fff" font-weight="bold">Content Writer</text>
+  <rect x="80" y="228" width="60" height="4" rx="2" fill="#915EFF"/>
+  <rect x="148" y="228" width="40" height="4" rx="2" fill="#915EFF66"/>
+  <rect x="80" y="238" width="80" height="4" rx="2" fill="#915EFF44"/>
+
+  <rect x="60" y="290" width="220" height="110" rx="12" fill="url(#card)" stroke="#915EFF44" stroke-width="1"/>
+  <text x="80" y="325" font-family="monospace" font-size="11" fill="#4ECDC4">AGENT_02</text>
+  <text x="80" y="345" font-family="monospace" font-size="13" fill="#fff" font-weight="bold">Image Creator</text>
+  <rect x="80" y="358" width="50" height="4" rx="2" fill="#4ECDC4"/>
+  <rect x="138" y="358" width="70" height="4" rx="2" fill="#4ECDC466"/>
+  <rect x="80" y="368" width="90" height="4" rx="2" fill="#4ECDC444"/>
+
+  <rect x="60" y="420" width="220" height="100" rx="12" fill="url(#card)" stroke="#915EFF44" stroke-width="1"/>
+  <text x="80" y="450" font-family="monospace" font-size="11" fill="#FFD93D">AGENT_03</text>
+  <text x="80" y="470" font-family="monospace" font-size="13" fill="#fff" font-weight="bold">Ad Optimizer</text>
+  <rect x="80" y="483" width="70" height="4" rx="2" fill="#FFD93D"/>
+  <rect x="80" y="493" width="45" height="4" rx="2" fill="#FFD93D66"/>
+
+  <!-- Arrow lines between agents -->
+  <line x1="280" y1="215" x2="340" y2="215" stroke="#915EFF55" stroke-width="2" stroke-dasharray="6,3"/>
+  <line x1="280" y1="345" x2="340" y2="345" stroke="#4ECDC455" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="340,210 352,215 340,220" fill="#915EFF55"/>
+  <polygon points="340,340 352,345 340,350" fill="#4ECDC455"/>
+
+  <!-- Output preview card -->
+  <rect x="360" y="140" width="420" height="320" rx="16" fill="#ffffff08" stroke="#915EFF33" stroke-width="1"/>
+  <rect x="360" y="140" width="420" height="40" rx="16" fill="#915EFF22"/>
+  <rect x="360" y="165" width="420" height="15" fill="#915EFF22"/>
+  <circle cx="385" cy="162" r="6" fill="#ff605c"/><circle cx="405" cy="162" r="6" fill="#ffbd44"/><circle cx="425" cy="162" r="6" fill="#00ca4e"/>
+  <text x="510" y="167" font-family="monospace" font-size="11" fill="#915EFF" text-anchor="middle">campaign_output.json</text>
+  <!-- Content in card -->
+  <text x="380" y="210" font-family="monospace" font-size="11" fill="#4ECDC4">// Generated Campaign</text>
+  <text x="380" y="230" font-family="monospace" font-size="11" fill="#fff">poster: <tspan fill="#FFD93D">"summer_ai_v3.png"</tspan></text>
+  <text x="380" y="250" font-family="monospace" font-size="11" fill="#fff">copy: <tspan fill="#FFD93D">"Transform your..."</tspan></text>
+  <text x="380" y="270" font-family="monospace" font-size="11" fill="#fff">reel: <tspan fill="#FFD93D">"reel_15s.mp4"</tspan></text>
+  <text x="380" y="290" font-family="monospace" font-size="11" fill="#915EFF">status: <tspan fill="#00ca4e">"PUBLISHED"</tspan></text>
+  <rect x="380" y="310" width="180" height="8" rx="4" fill="#915EFF33"/>
+  <rect x="380" y="325" width="250" height="8" rx="4" fill="#915EFF22"/>
+  <rect x="380" y="340" width="120" height="8" rx="4" fill="#915EFF33"/>
+  <rect x="380" y="360" width="200" height="8" rx="4" fill="#915EFF22"/>
+  <rect x="380" y="375" width="160" height="8" rx="4" fill="#915EFF33"/>
+  <rect x="380" y="395" width="100" height="8" rx="4" fill="#915EFF22"/>
+  <rect x="380" y="410" width="240" height="8" rx="4" fill="#915EFF33"/>
+
+  <!-- Stats on right -->
+  <rect x="820" y="140" width="320" height="140" rx="16" fill="#ffffff06" stroke="#915EFF22" stroke-width="1"/>
+  <text x="840" y="175" font-family="sans-serif" font-size="13" fill="#aaa">Active Pilots</text>
+  <text x="840" y="210" font-family="sans-serif" font-size="42" fill="#915EFF" font-weight="bold">25+</text>
+  <text x="840" y="260" font-family="sans-serif" font-size="12" fill="#4ECDC4">▲ AI workflows automated</text>
+
+  <rect x="820" y="300" width="145" height="130" rx="16" fill="#ffffff06" stroke="#4ECDC422" stroke-width="1"/>
+  <text x="840" y="335" font-family="sans-serif" font-size="12" fill="#aaa">Outputs</text>
+  <text x="840" y="370" font-family="sans-serif" font-size="30" fill="#4ECDC4" font-weight="bold">5x</text>
+  <text x="840" y="400" font-family="sans-serif" font-size="11" fill="#aaa">faster than</text>
+  <text x="840" y="416" font-family="sans-serif" font-size="11" fill="#aaa">manual</text>
+
+  <rect x="980" y="300" width="160" height="130" rx="16" fill="#ffffff06" stroke="#FFD93D22" stroke-width="1"/>
+  <text x="1000" y="335" font-family="sans-serif" font-size="12" fill="#aaa">Formats</text>
+  <text x="1000" y="370" font-family="sans-serif" font-size="30" fill="#FFD93D" font-weight="bold">6</text>
+  <text x="1000" y="400" font-family="sans-serif" font-size="11" fill="#aaa">poster · reel</text>
+  <text x="1000" y="416" font-family="sans-serif" font-size="11" fill="#aaa">carousel · ad</text>
+
+  <!-- Title -->
+  <text x="600" y="550" font-family="sans-serif" font-size="36" fill="#fff" font-weight="bold" text-anchor="middle">JOMO</text>
+  <text x="600" y="580" font-family="sans-serif" font-size="16" fill="#915EFF" text-anchor="middle">AI Marketing Automation · CrewAI · FastAPI</text>
+</svg>

@@ -20,6 +20,11 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import python from "./tech/python.svg";
+import cplusplus from "./tech/cplusplus.svg";
+import fastapi from "./tech/fastapi.svg";
+import postgresql from "./tech/postgresql.svg";
+import pytorch from "./tech/pytorch.svg";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -30,6 +35,10 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import zuvees from "./zuvees.gif";
+import jomoPreview from "./jomo_preview.svg";
+import widelabPreview from "./wiselab_preview.svg";
+import hftPreview from "./hft_preview.svg";
+import twinmindPreview from "./twinmind_preview.svg";
 
 export {
   logo,
@@ -53,6 +62,11 @@ export {
   tailwind,
   typescript,
   threejs,
+  python,
+  cplusplus,
+  fastapi,
+  postgresql,
+  pytorch,
   meta,
   shopify,
   starbucks,
@@ -61,4 +75,8 @@ export {
   jobit,
   tripguide,
   zuvees,
+  jomoPreview,
+  widelabPreview,
+  hftPreview,
+  twinmindPreview,
 };

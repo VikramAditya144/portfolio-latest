@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050a00"/>
+      <stop offset="100%" style="stop-color:#0a1a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Terminal window -->
+  <rect x="40" y="60" width="680" height="500" rx="12" fill="#0d1117" stroke="#00ff4133" stroke-width="1"/>
+  <rect x="40" y="60" width="680" height="36" rx="12" fill="#161b22"/>
+  <rect x="40" y="81" width="680" height="15" fill="#161b22"/>
+  <circle cx="68" cy="79" r="7" fill="#ff605c"/><circle cx="90" cy="79" r="7" fill="#ffbd44"/><circle cx="112" cy="79" r="7" fill="#00ca4e"/>
+  <text x="340" y="83" font-family="monospace" font-size="12" fill="#888" text-anchor="middle">hft_market_data — ./bin/publisher</text>
+  <!-- Terminal content -->
+  <text x="60" y="120" font-family="monospace" font-size="11" fill="#00ff41">$ ./bin/publisher --mode=spsc --consumers=2</text>
+  <text x="60" y="140" font-family="monospace" font-size="11" fill="#888">[HFT] Initializing ring buffer: 65536 slots × 64B</text>
+  <text x="60" y="160" font-family="monospace" font-size="11" fill="#888">[HFT] Cache-line aligned: true | NUMA node: 0</text>
+  <text x="60" y="180" font-family="monospace" font-size="11" fill="#00ff41">[HFT] Publisher thread pinned → CPU 0</text>
+  <text x="60" y="200" font-family="monospace" font-size="11" fill="#00ff41">[HFT] TCP consumer ready on :9001</text>
+  <text x="60" y="220" font-family="monospace" font-size="11" fill="#00ff41">[HFT] SHM consumer attached @ /dev/shm/hft_md</text>
+  <text x="60" y="248" font-family="monospace" font-size="11" fill="#aaa">--- Market Data Stream ---</text>
+  <text x="60" y="268" font-family="monospace" font-size="11" fill="#fff">AAPL  <tspan fill="#00ff41">182.34</tspan>  +0.12  [lat: <tspan fill="#FFD93D">1.2μs</tspan>]</text>
+  <text x="60" y="288" font-family="monospace" font-size="11" fill="#fff">TSLA  <tspan fill="#ff6b6b">241.87</tspan>  -1.43  [lat: <tspan fill="#FFD93D">0.9μs</tspan>]</text>
+  <text x="60" y="308" font-family="monospace" font-size="11" fill="#fff">NVDA  <tspan fill="#00ff41">512.10</tspan>  +8.22  [lat: <tspan fill="#FFD93D">1.1μs</tspan>]</text>
+  <text x="60" y="328" font-family="monospace" font-size="11" fill="#fff">MSFT  <tspan fill="#00ff41">338.45</tspan>  +0.88  [lat: <tspan fill="#FFD93D">1.4μs</tspan>]</text>
+  <text x="60" y="348" font-family="monospace" font-size="11" fill="#fff">AMZN  <tspan fill="#ff6b6b">178.92</tspan>  -2.10  [lat: <tspan fill="#FFD93D">1.0μs</tspan>]</text>
+  <text x="60" y="376" font-family="monospace" font-size="11" fill="#888">--- Consumer Stats (1s window) ---</text>
+  <text x="60" y="396" font-family="monospace" font-size="11" fill="#4ECDC4">TCP:  msgs=240,000  drops=0  lat_p99=2.1μs</text>
+  <text x="60" y="416" font-family="monospace" font-size="11" fill="#4ECDC4">SHM:  msgs=240,000  drops=0  lat_p99=1.8μs</text>
+  <text x="60" y="436" font-family="monospace" font-size="11" fill="#00ff41">ring_buf: head=48291024  tail=48290984 (free=40)</text>
+  <text x="60" y="464" font-family="monospace" font-size="11" fill="#888">[SPSC] lock-free: 0 contention events</text>
+  <text x="60" y="484" font-family="monospace" font-size="12" fill="#00ff41">▋</text>
+
+  <!-- Architecture diagram -->
+  <rect x="750" y="60" width="410" height="500" rx="12" fill="#0d1117" stroke="#00ff4133" stroke-width="1"/>
+  <text x="955" y="100" font-family="sans-serif" font-size="14" fill="#00ff41" text-anchor="middle" font-weight="bold">Architecture</text>
+  <!-- Publisher -->
+  <rect x="820" y="120" width="270" height="60" rx="8" fill="#00ff4115" stroke="#00ff4144" stroke-width="1"/>
+  <text x="955" y="145" font-family="monospace" font-size="12" fill="#00ff41" text-anchor="middle">Publisher Thread</text>
+  <text x="955" y="163" font-family="monospace" font-size="10" fill="#888" text-anchor="middle">CPU-pinned · Boost.Asio</text>
+  <!-- Ring buffer -->
+  <rect x="820" y="220" width="270" height="60" rx="8" fill="#FFD93D15" stroke="#FFD93D44" stroke-width="1"/>
+  <text x="955" y="245" font-family="monospace" font-size="12" fill="#FFD93D" text-anchor="middle">SPSC Ring Buffer</text>
+  <text x="955" y="263" font-family="monospace" font-size="10" fill="#888" text-anchor="middle">lock-free · 64B cache-aligned</text>
+  <!-- Consumers -->
+  <rect x="780" y="330" width="160" height="60" rx="8" fill="#4ECDC415" stroke="#4ECDC444" stroke-width="1"/>
+  <text x="860" y="355" font-family="monospace" font-size="11" fill="#4ECDC4" text-anchor="middle">TCP Consumer</text>
+  <text x="860" y="372" font-family="monospace" font-size="10" fill="#888" text-anchor="middle">port :9001</text>
+  <rect x="970" y="330" width="160" height="60" rx="8" fill="#915EFF15" stroke="#915EFF44" stroke-width="1"/>
+  <text x="1050" y="355" font-family="monospace" font-size="11" fill="#915EFF" text-anchor="middle">SHM Consumer</text>
+  <text x="1050" y="372" font-family="monospace" font-size="10" fill="#888" text-anchor="middle">/dev/shm IPC</text>
+  <!-- Arrows -->
+  <line x1="955" y1="180" x2="955" y2="220" stroke="#00ff4155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="900" y1="280" x2="860" y2="330" stroke="#FFD93D55" stroke-width="2"/>
+  <line x1="1010" y1="280" x2="1050" y2="330" stroke="#FFD93D55" stroke-width="2"/>
+  <polygon points="855,325 865,325 860,330" fill="#FFD93D55"/>
+  <polygon points="1045,325 1055,325 1050,330" fill="#FFD93D55"/>
+  <polygon points="950,215 960,215 955,220" fill="#00ff4155"/>
+
+  <!-- Perf stats -->
+  <rect x="780" y="420" width="350" height="120" rx="10" fill="#ffffff05" stroke="#00ff4122" stroke-width="1"/>
+  <text x="800" y="446" font-family="sans-serif" font-size="11" fill="#888">Throughput</text>
+  <text x="800" y="474" font-family="sans-serif" font-size="28" fill="#00ff41" font-weight="bold">240K msg/s</text>
+  <text x="970" y="446" font-family="sans-serif" font-size="11" fill="#888">Latency P99</text>
+  <text x="970" y="474" font-family="sans-serif" font-size="28" fill="#FFD93D" font-weight="bold">&lt;2μs</text>
+  <text x="800" y="510" font-family="sans-serif" font-size="11" fill="#888">C++17 · Boost.Asio · lock-free IPC · NUMA-aware</text>
+
+  <!-- Title -->
+  <text x="600" y="587" font-family="sans-serif" font-size="30" fill="#fff" font-weight="bold" text-anchor="middle">HFT Market Data System</text>
+  <text x="600" y="613" font-family="monospace" font-size="13" fill="#00ff41" text-anchor="middle">C++17 · Lock-free SPSC Ring Buffer · Boost.Asio</text>
+</svg>

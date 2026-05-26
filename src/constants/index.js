@@ -15,6 +15,11 @@ import {
   git,
   figma,
   docker,
+  python,
+  cplusplus,
+  fastapi,
+  postgresql,
+  pytorch,
   meta,
   starbucks,
   tesla,
@@ -24,6 +29,10 @@ import {
   tripguide,
   zuvees,
   threejs,
+  jomoPreview,
+  widelabPreview,
+  hftPreview,
+  twinmindPreview,
 } from "../assets";
 
 import bgRemoval from "../assets/journey/bg_removal.jpg";
@@ -93,56 +102,48 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "Python",
+    icon: python,
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "C++",
+    icon: cplusplus,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "FastAPI",
+    icon: fastapi,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "PyTorch",
+    icon: pytorch,
   },
   {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "TypeScript",
+    icon: typescript,
   },
   {
     name: "Node JS",
     icon: nodejs,
   },
   {
+    name: "PostgreSQL",
+    icon: postgresql,
+  },
+  {
     name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
+    name: "Docker",
     icon: docker,
+  },
+  {
+    name: "Git",
+    icon: git,
   },
 ];
 
@@ -404,8 +405,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/vikramaditya-dev",
+    image: jomoPreview,
+    source_code_link: "https://github.com/VikramAditya144/Project-Hackathon",
   },
   {
     name: "WiseLab.AI – AI LMS",
@@ -425,8 +426,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/vikramaditya-dev",
+    image: widelabPreview,
+    source_code_link: "https://github.com/VikramAditya144/BK-TEST-APP",
   },
   {
     name: "HFT Market Data System",
@@ -446,8 +447,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/vikramaditya-dev",
+    image: hftPreview,
+    source_code_link: "https://github.com/VikramAditya144/HFT_Final_Project",
   },
   {
     name: "TwinMind – AI Meeting Copilot",
@@ -467,8 +468,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/VikramAditya144",
+    image: twinmindPreview,
+    source_code_link: "https://github.com/VikramAditya144/meetingscribe",
     live_link: "",
   },
   {
