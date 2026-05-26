@@ -1,5 +1,5 @@
 import React from "react";
-import Tilt from "react-tilt";
+import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -47,11 +47,14 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I'm an AI / GenAI engineer with hands-on production experience building
+        LLM-powered systems, OCR pipelines, speech-to-text services, and
+        AI-driven automation platforms. I've shipped real products used across
+        11+ states in India, saved 40+ lakhs through AI infrastructure
+        optimisation at TradeIndia, and built low-latency C++17 systems
+        modelling HFT architectures. I thrive at the intersection of AI
+        research and production engineering — turning complex ideas into
+        scalable, reliable software. Let's build something impactful together!
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

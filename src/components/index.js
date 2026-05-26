@@ -5,7 +5,8 @@ import About from "./About";
 import Tech from "./Tech";
 import Experience from "./Experience";
 import Works from "./Works";
-import Feedbacks from "./Feedbacks";
+import Honors from "./Honors";
+import Journey from "./Journey";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 
@@ -17,11 +18,12 @@ export {
   Tech,
   Experience,
   Works,
-  Feedbacks,
+  Honors,
+  Journey,
   Contact,
   CanvasLoader,
-  EarthCanvas, 
-  BallCanvas, 
-  ComputersCanvas, 
+  EarthCanvas,
+  BallCanvas,
+  ComputersCanvas,
   StarsCanvas
 };
