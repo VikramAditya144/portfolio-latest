@@ -24,6 +24,8 @@ import {
   starbucks,
   tesla,
   shopify,
+  tradeindia,
+  kivio,
   carrent,
   jobit,
   tripguide,
@@ -151,8 +153,8 @@ const experiences = [
   {
     title: "SDE Intern",
     company_name: "Kivio Technologies",
-    icon: starbucks,
-    iconBg: "#383E56",
+    icon: kivio,
+    iconBg: "#0a0a0a",
     date: "Oct 2024 – Jan 2025",
     points: [
       "Built voice-driven conversational workflows using NLP and LLM-powered pipelines.",
@@ -163,8 +165,8 @@ const experiences = [
   {
     title: "Software Engineer Intern – AI Systems",
     company_name: "TradeIndia",
-    icon: tesla,
-    iconBg: "#E6DEDD",
+    icon: tradeindia,
+    iconBg: "#fff",
     date: "Jan 2025 – Mar 2025",
     points: [
       "Integrated LLM-powered automation services into enterprise B2B platforms.",
@@ -175,8 +177,8 @@ const experiences = [
   {
     title: "Product Engineer – AI / GenAI",
     company_name: "TradeIndia",
-    icon: meta,
-    iconBg: "#E6DEDD",
+    icon: tradeindia,
+    iconBg: "#fff",
     date: "Mar 2025 – Oct 2025",
     points: [
       "Led deployment of TradeIndia.AI, saving 40+ lakhs through AI automation and optimised LLM infrastructure.",
@@ -407,6 +409,7 @@ const projects = [
     ],
     image: jomoPreview,
     source_code_link: "https://github.com/VikramAditya144/Project-Hackathon",
+    live_link: "https://jomobit.vercel.app/",
   },
   {
     name: "WiseLab.AI – AI LMS",
@@ -428,6 +431,7 @@ const projects = [
     ],
     image: widelabPreview,
     source_code_link: "https://github.com/VikramAditya144/BK-TEST-APP",
+    live_link: "https://wise-lab.vercel.app/",
   },
   {
     name: "HFT Market Data System",
@@ -470,7 +474,7 @@ const projects = [
     ],
     image: twinmindPreview,
     source_code_link: "https://github.com/VikramAditya144/meetingscribe",
-    live_link: "",
+    live_link: "https://twinmind-assistant.vercel.app/",
   },
   {
     name: "Zuvees – E-Commerce Platform",

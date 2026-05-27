@@ -7,6 +7,7 @@ import Experience from "./Experience";
 import Works from "./Works";
 import Honors from "./Honors";
 import Journey from "./Journey";
+import Skills from "./Skills";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 
@@ -20,6 +21,7 @@ export {
   Works,
   Honors,
   Journey,
+  Skills,
   Contact,
   CanvasLoader,
   EarthCanvas,

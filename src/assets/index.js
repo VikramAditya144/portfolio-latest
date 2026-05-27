@@ -30,15 +30,17 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import tradeindia from "./company/tradeindia.png";
+import kivio from "./company/kivio.svg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import zuvees from "./zuvees.gif";
-import jomoPreview from "./jomo_preview.svg";
-import widelabPreview from "./wiselab_preview.svg";
+import jomoPreview from "./jomo_live.png";
+import widelabPreview from "./wiselab_live.png";
 import hftPreview from "./hft_preview.svg";
-import twinmindPreview from "./twinmind_preview.svg";
+import twinmindPreview from "./twinmind_live.png";
 
 export {
   logo,
@@ -71,6 +73,8 @@ export {
   shopify,
   starbucks,
   tesla,
+  tradeindia,
+  kivio,
   carrent,
   jobit,
   tripguide,

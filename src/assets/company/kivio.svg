@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="24" fill="#0a0a0a"/>
+  <!-- Kivio K-shape in purple -->
+  <text x="100" y="138" font-family="Arial Black, sans-serif" font-size="110" fill="#7B4FFF" text-anchor="middle" font-weight="900">K</text>
+</svg>
