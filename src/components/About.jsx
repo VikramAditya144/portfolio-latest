@@ -43,19 +43,38 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-        I'm an AI / GenAI engineer with hands-on production experience building
-        LLM-powered systems, OCR pipelines, speech-to-text services, and
-        AI-driven automation platforms. I've shipped real products used across
-        11+ states in India, saved 40+ lakhs through AI infrastructure
-        optimisation at TradeIndia, and built low-latency C++17 systems
-        modelling HFT architectures. I thrive at the intersection of AI
-        research and production engineering — turning complex ideas into
-        scalable, reliable software. Let's build something impactful together!
-      </motion.p>
+      <div className='mt-4 flex flex-col-reverse md:flex-row items-center md:items-start gap-10'>
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className='text-secondary text-[17px] max-w-3xl leading-[30px]'
+        >
+          I'm an AI / GenAI engineer with hands-on production experience building
+          LLM-powered systems, OCR pipelines, speech-to-text services, and
+          AI-driven automation platforms. I've shipped real products used across
+          11+ states in India, saved 40+ lakhs through AI infrastructure
+          optimisation at TradeIndia, and built low-latency C++17 systems
+          modelling HFT architectures. I thrive at the intersection of AI
+          research and production engineering — turning complex ideas into
+          scalable, reliable software. Let's build something impactful together!
+        </motion.p>
+
+        <motion.div
+          variants={fadeIn("left", "spring", 0.2, 0.85)}
+          className='shrink-0'
+        >
+          <Tilt
+            options={{ max: 20, scale: 1.03, speed: 450 }}
+            className='green-pink-gradient p-[2px] rounded-2xl shadow-card'
+          >
+            <img
+              src='/profile.jpg'
+              alt='Vikramaditya'
+              className='w-[230px] h-[280px] object-cover rounded-2xl'
+              loading='lazy'
+            />
+          </Tilt>
+        </motion.div>
+      </div>
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (

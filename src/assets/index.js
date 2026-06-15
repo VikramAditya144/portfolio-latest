@@ -19,12 +19,12 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
-import python from "./tech/python.svg";
-import cplusplus from "./tech/cplusplus.svg";
-import fastapi from "./tech/fastapi.svg";
-import postgresql from "./tech/postgresql.svg";
-import pytorch from "./tech/pytorch.svg";
+import threejs from "./tech/threejs.png";
+import python from "./tech/python.png";
+import cplusplus from "./tech/cplusplus.png";
+import fastapi from "./tech/fastapi.png";
+import postgresql from "./tech/postgresql.png";
+import pytorch from "./tech/pytorch.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
