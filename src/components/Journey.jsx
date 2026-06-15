@@ -68,7 +68,7 @@ const Lightbox = ({ images, startIndex, onClose }) => {
 };
 
 // Mini image strip inside card
-const ImageStrip = ({ images, onImageClick }) => {
+const ImageStrip = ({ images, onImageClick, imgPos = "object-top" }) => {
   if (!images || images.length === 0) return null;
 
   if (images.length === 1) {
@@ -77,7 +77,7 @@ const ImageStrip = ({ images, onImageClick }) => {
         className="w-full h-[220px] overflow-hidden rounded-xl cursor-zoom-in"
         onClick={() => onImageClick(0)}
       >
-        <img src={images[0]} alt="" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300" />
+        <img src={images[0]} alt="" className={`w-full h-full object-cover ${imgPos} hover:scale-105 transition-transform duration-300`} />
       </div>
     );
   }
@@ -87,7 +87,7 @@ const ImageStrip = ({ images, onImageClick }) => {
       <div className="grid grid-cols-2 gap-1 h-[200px] rounded-xl overflow-hidden">
         {images.map((img, i) => (
           <div key={i} className="overflow-hidden cursor-zoom-in" onClick={() => onImageClick(i)}>
-            <img src={img} alt="" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300" />
+            <img src={img} alt="" className={`w-full h-full object-cover ${imgPos} hover:scale-105 transition-transform duration-300`} />
           </div>
         ))}
       </div>
@@ -98,14 +98,14 @@ const ImageStrip = ({ images, onImageClick }) => {
   return (
     <div className="flex gap-1 h-[220px] rounded-xl overflow-hidden">
       <div className="flex-1 overflow-hidden cursor-zoom-in" onClick={() => onImageClick(0)}>
-        <img src={images[0]} alt="" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300" />
+        <img src={images[0]} alt="" className={`w-full h-full object-cover ${imgPos} hover:scale-105 transition-transform duration-300`} />
       </div>
       <div className="flex flex-col gap-1 w-[45%]">
         <div className="flex-1 overflow-hidden cursor-zoom-in relative" onClick={() => onImageClick(1)}>
-          <img src={images[1]} alt="" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300" />
+          <img src={images[1]} alt="" className={`w-full h-full object-cover ${imgPos} hover:scale-105 transition-transform duration-300`} />
         </div>
         <div className="flex-1 overflow-hidden cursor-zoom-in relative" onClick={() => onImageClick(2)}>
-          <img src={images[2]} alt="" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300" />
+          <img src={images[2]} alt="" className={`w-full h-full object-cover ${imgPos} hover:scale-105 transition-transform duration-300`} />
           {images.length > 3 && (
             <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
               <span className="text-white text-xl font-bold">+{images.length - 3}</span>
@@ -127,12 +127,13 @@ const JourneyCard = ({ item, index }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: index * 0.08 }}
-        className="bg-[#1a1a2e] border border-[#915EFF22] rounded-2xl overflow-hidden hover:border-[#915EFF55] transition-all duration-300"
+        className="glass-card overflow-hidden"
       >
         {item.images && item.images.length > 0 && (
           <div className="p-3 pb-0">
             <ImageStrip
               images={item.images}
+              imgPos={item.imgPos || "object-top"}
               onImageClick={(i) => setLightbox(i)}
             />
           </div>

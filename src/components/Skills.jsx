@@ -57,7 +57,7 @@ const Skills = () => {
           <motion.div
             key={group.category}
             variants={fadeIn("up", "spring", gi * 0.15, 0.6)}
-            className="bg-[#1a1a2e] border border-[#915EFF22] rounded-2xl p-6 hover:border-[#915EFF44] transition-all duration-300"
+            className="glass-card p-6"
           >
             <div className="flex items-center gap-2 mb-4">
               <div className="w-3 h-3 rounded-full" style={{ backgroundColor: group.color }} />

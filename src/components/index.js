@@ -11,12 +11,14 @@ import Skills from "./Skills";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import ScrollProgress from "./ScrollProgress";
+import Footer from "./Footer";
 
 
 export {
   Hero,
   Navbar,
   ScrollProgress,
+  Footer,
   About,
   Tech,
   Experience,

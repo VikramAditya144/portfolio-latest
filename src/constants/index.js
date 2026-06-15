@@ -383,6 +383,7 @@ const journey = [
     title: "Session with Subhash Choudhary — CTO of Dukaan ($70M company)",
     content: "Had a wonderful session with Subhash Choudhary, CTO of Dukaan. From a small village in Bihar and staying in the slums of Mumbai — to building a $70 million company.\n\nA story of pure grit, resilience, and the power of staying hungry.",
     images: [dukaanCto],
+    imgPos: "object-[center_60%]",
     likes: "267",
     comments: "33",
   },

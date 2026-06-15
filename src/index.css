@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,9 +8,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+body {
+  background-color: #050816;
+}
+
+.font-display {
+  font-family: "Space Grotesk", "Poppins", sans-serif;
+  letter-spacing: -0.02em;
 }
 
 .hash-span {
@@ -259,6 +268,94 @@
 
 @media (prefers-reduced-motion: reduce) {
   .hero-name-gradient {
+    animation: none;
+  }
+}
+
+/* ---- aesthetic theme layer ---- */
+
+/* ambient aurora glow behind the whole page */
+.aurora-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.aurora-bg::before,
+.aurora-bg::after {
+  content: "";
+  position: absolute;
+  width: 55vw;
+  height: 55vw;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+}
+
+.aurora-bg::before {
+  top: -10%;
+  left: -10%;
+  background: radial-gradient(circle, #915eff 0%, transparent 70%);
+  animation: auroraDrift1 18s ease-in-out infinite alternate;
+}
+
+.aurora-bg::after {
+  bottom: -15%;
+  right: -10%;
+  background: radial-gradient(circle, #00cea8 0%, transparent 70%);
+  animation: auroraDrift2 22s ease-in-out infinite alternate;
+}
+
+@keyframes auroraDrift1 {
+  to {
+    transform: translate(12%, 18%) scale(1.15);
+  }
+}
+
+@keyframes auroraDrift2 {
+  to {
+    transform: translate(-12%, -12%) scale(1.2);
+  }
+}
+
+/* frosted glass card */
+.glass-card {
+  background: rgba(20, 16, 48, 0.55);
+  border: 1px solid rgba(145, 94, 255, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(145, 94, 255, 0.5);
+  box-shadow: 0 18px 50px -20px rgba(145, 94, 255, 0.5);
+}
+
+/* gradient hairline used under section headings */
+.accent-rule {
+  height: 3px;
+  width: 64px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #915eff, #00cea8);
+}
+
+/* gradient text helper */
+.text-gradient-accent {
+  background: linear-gradient(90deg, #b69bff, #5ce0c6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-bg::before,
+  .aurora-bg::after {
     animation: none;
   }
 }
