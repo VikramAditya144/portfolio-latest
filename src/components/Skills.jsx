@@ -6,24 +6,24 @@ import { textVariant, fadeIn } from "../utils/motion";
 
 const skillGroups = [
   {
-    category: "AI / ML",
+    category: "AI / ML Engineering",
     color: "#915EFF",
-    skills: ["Python", "PyTorch", "LangChain", "CrewAI", "OpenAI API", "Hugging Face", "RAG", "LLM Fine-tuning", "Computer Vision", "NLP"],
+    skills: ["Python", "PyTorch", "TensorFlow", "Scikit-learn", "Deep Learning", "Computer Vision", "NLP", "Model Fine-tuning", "OCR", "Speech-to-Text"],
   },
   {
-    category: "Backend",
-    color: "#4ECDC4",
-    skills: ["FastAPI", "Node.js", "Express.js", "REST APIs", "WebSockets", "Celery", "Redis", "PostgreSQL", "MongoDB", "Supabase"],
+    category: "Generative AI & LLMs",
+    color: "#00cea8",
+    skills: ["LangChain", "CrewAI", "OpenAI API", "Hugging Face", "RAG", "Vector DBs", "Prompt Engineering", "Agentic Workflows", "Embeddings", "LLM Serving"],
   },
   {
-    category: "Frontend",
-    color: "#FFD93D",
-    skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js", "Redux", "React Query"],
-  },
-  {
-    category: "Systems & DevOps",
+    category: "MLOps & DevOps",
     color: "#FF6B6B",
-    skills: ["C++17", "Boost.Asio", "Lock-free IPC", "Docker", "CI/CD", "AWS", "Vercel", "Linux", "Git"],
+    skills: ["Docker", "Kubernetes", "CI/CD", "AWS", "GCP", "MLflow", "Model Deployment", "Monitoring", "Linux", "Terraform", "Git"],
+  },
+  {
+    category: "Backend & Systems",
+    color: "#4ECDC4",
+    skills: ["FastAPI", "Node.js", "REST APIs", "WebSockets", "Celery", "Redis", "PostgreSQL", "MongoDB", "C++17", "Low-latency IPC"],
   },
 ];
 

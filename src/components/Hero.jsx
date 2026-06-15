@@ -13,7 +13,7 @@ const ROLES = [
 
 const SOCIALS = [
   { label: "GitHub", href: "https://github.com/VikramAditya144" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/vikramaditya7" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/vikramaditya7/" },
   { label: "X", href: "https://x.com/0alloc" },
 ];
 
@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px] z-10 pointer-events-none max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
@@ -74,7 +74,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className='mt-6 flex flex-wrap items-center gap-4'
+            className='mt-6 flex flex-wrap items-center gap-4 pointer-events-auto'
           >
             <a
               href='#work'
