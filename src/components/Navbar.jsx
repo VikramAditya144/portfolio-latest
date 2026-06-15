@@ -29,8 +29,10 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      } w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${
+        scrolled
+          ? "bg-primary/80 backdrop-blur-md border-b border-white/5 shadow-lg shadow-black/20"
+          : "bg-transparent"
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
@@ -61,6 +63,16 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <li>
+            <a
+              href='/resume.pdf'
+              target='_blank'
+              rel='noreferrer'
+              className='border border-[#915EFF]/60 hover:bg-[#915EFF] hover:border-[#915EFF] text-white text-[16px] font-medium px-4 py-1.5 rounded-lg transition-colors'
+            >
+              Résumé
+            </a>
+          </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -91,6 +103,11 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <li className='font-poppins font-medium cursor-pointer text-[16px] text-[#915EFF]'>
+                <a href='/resume.pdf' target='_blank' rel='noreferrer'>
+                  Résumé
+                </a>
+              </li>
             </ul>
           </div>
         </div>

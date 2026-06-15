@@ -10,11 +10,13 @@ import Journey from "./Journey";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
+import ScrollProgress from "./ScrollProgress";
 
 
 export {
   Hero,
   Navbar,
+  ScrollProgress,
   About,
   Tech,
   Experience,

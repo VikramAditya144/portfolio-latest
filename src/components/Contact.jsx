@@ -27,22 +27,44 @@ const Contact = () => {
     });
   };
 
+  const EMAIL = "vikramaditya.23bcs10061@sst.scaler.com";
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      alert("Please fill in your name, email, and message.");
+      return;
+    }
+
+    const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+
+    // Fallback: if EmailJS isn't configured, open the user's mail client.
+    if (!serviceId || !templateId || !publicKey) {
+      const subject = encodeURIComponent(`Portfolio enquiry from ${form.name}`);
+      const body = encodeURIComponent(
+        `${form.message}\n\n— ${form.name} (${form.email})`
+      );
+      window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+      return;
+    }
+
     setLoading(true);
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        serviceId,
+        templateId,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Vikramaditya",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: EMAIL,
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        publicKey
       )
       .then(
         () => {
@@ -116,11 +138,30 @@ const Contact = () => {
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-[#915EFF] hover:bg-[#7d49e6] transition-colors py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
+
+        <div className='mt-10 flex flex-wrap items-center gap-4'>
+          {[
+            { label: "Email", href: `mailto:${EMAIL}` },
+            { label: "LinkedIn", href: "https://linkedin.com/in/vikramaditya7" },
+            { label: "GitHub", href: "https://github.com/VikramAditya144" },
+            { label: "X / Twitter", href: "https://x.com/0alloc" },
+          ].map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target='_blank'
+              rel='noreferrer'
+              className='text-secondary hover:text-white text-[14px] font-medium underline-offset-4 hover:underline transition-colors'
+            >
+              {s.label}
+            </a>
+          ))}
+        </div>
       </motion.div>
 
       <motion.div
